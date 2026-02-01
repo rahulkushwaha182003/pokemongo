@@ -83,6 +83,9 @@ async function sendTelegramMessage(message) {
       return { success: false, error: "No Chat ID available" };
     }
 
+    console.log(`📤 Sending message to chat ID: ${chatId}`);
+    console.log(`🔑 Using bot token: ${BOT_TOKEN.substring(0, 10)}...`);
+
     const data = JSON.stringify({
       chat_id: chatId,
       text: message,
@@ -231,6 +234,34 @@ app.get("/api/health", (req, res) => {
     status: "Server running",
     timestamp: new Date().toISOString(),
   });
+});
+
+// Test Telegram configuration endpoint
+app.get("/api/test-telegram", async (req, res) => {
+  try {
+    console.log("🧪 Testing Telegram configuration...");
+    console.log(`🔑 Bot Token: ${BOT_TOKEN.substring(0, 10)}...`);
+    console.log(`💬 Chat ID: ${CHAT_ID}`);
+    
+    const botInfo = await getBotInfo();
+    const chatId = await getChatId();
+    
+    res.json({
+      success: true,
+      bot_token_configured: !!BOT_TOKEN,
+      chat_id_configured: !!CHAT_ID,
+      bot_info: botInfo,
+      chat_id: chatId,
+      timestamp: new Date().toISOString(),
+    });
+  } catch (error) {
+    console.error("❌ Test endpoint error:", error);
+    res.json({
+      success: false,
+      error: error.message,
+      timestamp: new Date().toISOString(),
+    });
+  }
 });
 
 // Bot status endpoint
