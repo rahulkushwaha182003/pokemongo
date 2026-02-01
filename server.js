@@ -223,6 +223,11 @@ app.get("/api/admin/logs", (req, res) => {
   }
 });
 
+// Serve main login page
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 // Serve Admin Panel
 app.get("/admin", (req, res) => {
   res.sendFile(path.join(__dirname, "admin.html"));
