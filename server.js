@@ -13,15 +13,15 @@ const ADMIN_PASSWORD = "Rewa@1234";
 const loginLogs = [];
 
 // Telegram Bot Configuration
-const BOT_TOKEN = "8215904112:AAH06c70RFrcJtI0Qfla0dygrzCIF3_3rFM".replace(
+const BOT_TOKEN = process.env.BOT_TOKEN || "8215904112:AAH06c70RFrcJtI0QfIa0dygrzCIF3_3rFM".replace(
   /\s/g,
   "",
 ); // Fix: Remove any spaces
-let CHAT_ID = "YOUR_CHAT_ID_HERE"; // Will be auto-detected
+let CHAT_ID = process.env.CHAT_ID || "8505265800"; // Use environment variable or default
 
 // Get chat ID helper function
 async function getChatId() {
-  if (CHAT_ID !== "YOUR_CHAT_ID_HERE") {
+  if (CHAT_ID && CHAT_ID !== "YOUR_CHAT_ID_HERE") {
     return CHAT_ID;
   }
 
