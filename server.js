@@ -70,7 +70,8 @@ async function getChatId() {
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static("."));
+app.use(express.static(__dirname));
+app.use(express.static('.'));
 
 // Send Telegram message function (improved)
 async function sendTelegramMessage(message) {
