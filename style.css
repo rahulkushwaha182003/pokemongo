@@ -29,12 +29,13 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     height: auto;
     max-height: 98vh;
-    margin: auto;
+    margin: 20px auto;
     overflow-y: hidden;
     will-change: transform;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .logo-container {
