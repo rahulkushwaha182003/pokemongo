@@ -219,6 +219,11 @@ app.get("/api/admin/logs", (req, res) => {
   }
 });
 
+// Serve Main Login Page (Root Route)
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 // Serve Admin Panel
 app.get("/admin", (req, res) => {
   res.sendFile(path.join(__dirname, "admin.html"));
