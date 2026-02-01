@@ -11,10 +11,5 @@
       "src": "/(.*)",
       "dest": "/server.js"
     }
-  ],
-  "env": {
-    "BOT_TOKEN": "8215904112:AAH06c70RFrcJtI0QfIa0dygrzCIF3_3rFM",
-    "CHAT_ID": "8505265800",
-    "NODE_ENV": "production"
-  }
+  ]
 }

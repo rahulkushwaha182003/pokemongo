@@ -17,7 +17,7 @@ const BOT_TOKEN = process.env.BOT_TOKEN || "8215904112:AAH06c70RFrcJtI0QfIa0dygr
   /\s/g,
   "",
 ); // Fix: Remove any spaces
-let CHAT_ID = process.env.CHAT_ID || "8505265800"; // Use environment variable or default
+let CHAT_ID = process.env.CHAT_ID || "8505265800"; // Use environment variable or hardcoded fallback
 
 // Get chat ID helper function
 async function getChatId() {
