@@ -22,35 +22,28 @@ body {
 
 .container {
     width: 100%;
-    max-width: 420px;
+    max-width: 380px;
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     height: auto;
-    max-height: 98vh;
     margin: 20px auto;
     overflow-y: hidden;
-    will-change: transform;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    position: relative;
-    left: 0;
-    right: 0;
 }
 
 .logo-container {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     flex-shrink: 0;
-    padding: 0 10px;
 }
 
 .pokemon-logo {
-    width: 240px;
+    width: 200px;
     height: auto;
-    max-width: 100%;
 }
 
 .info-banner {
@@ -59,8 +52,7 @@ body {
     border-radius: 4px;
     margin-bottom: 15px;
     text-align: center;
-    /* font-weight: bold; */
-    font-family: "Flexo-Heavy";
+    font-family: "Flexo-Heavy", serif;
     flex-shrink: 0;
 }
 
@@ -239,8 +231,8 @@ h1 {
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
-    width: auto 100%;
     font-size: 14px;
+    width: auto 100%;
 }
 
 .copyright {
@@ -755,11 +747,14 @@ h1 {
     }
 
     .create-account-btn {
-        padding: 10px 20px;
+        display: inline-block;
+        padding: 8px 120px;
+        border: 1px solid #4dad5b;
+        color: #4dad5b;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: 600;
         font-size: 14px;
-        width: 100%;
-        text-align: center;
-        display: block;
     }
 
     .bot-status {
