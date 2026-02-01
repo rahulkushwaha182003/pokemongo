@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -22,14 +23,16 @@ body {
 
 .container {
     width: 100%;
-    max-width: 380px;
+    max-width: 420px;
     background-color: #ffffff;
-    padding: 30px;
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     height: auto;
-    margin: 20px auto;
+    max-height: 98vh;
+    margin: auto;
     overflow-y: hidden;
+    will-change: transform;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -52,7 +55,8 @@ body {
     border-radius: 4px;
     margin-bottom: 15px;
     text-align: center;
-    font-family: "Flexo-Heavy", serif;
+    /* font-weight: bold; */
+    font-family: "Flexo-Heavy";
     flex-shrink: 0;
 }
 
@@ -231,8 +235,8 @@ h1 {
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
-    font-size: 14px;
     width: auto 100%;
+    font-size: 14px;
 }
 
 .copyright {
@@ -747,14 +751,11 @@ h1 {
     }
 
     .create-account-btn {
-        display: inline-block;
-        padding: 8px 120px;
-        border: 1px solid #4dad5b;
-        color: #4dad5b;
-        text-decoration: none;
-        border-radius: 4px;
-        font-weight: 600;
+        padding: 10px 20px;
         font-size: 14px;
+        width: 100%;
+        text-align: center;
+        display: block;
     }
 
     .bot-status {
@@ -940,3 +941,158 @@ h1 {
         height: 24px;
     }
 }
+=======
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    border:0px solid;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A9a9a9;
+}
+.conatiner{
+    width: 420px;
+    height: 559.5px;
+    background-color:#ffffff;
+    align-self: center;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 15px;
+    filter: drop-shadow(0 3px 15px rgba(0, 0, 0, 0.3));
+}
+.Pokémonlogo{
+    width: 240px;
+    height: 88.36px;
+    margin: 0px 66px;
+    
+
+}
+h1{
+    width: 355px;
+    height: 56px;
+    color: #212529;
+    margin bottom: 10px;
+    font-size:22px;
+    text-align: center;
+    /* font-family: "Flexo-Heavy", serif; */
+}
+.userinput{
+    width: 355px;
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #313131;
+    color: white;
+    border-radius: 5px;
+    border: 4px solid transparent;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding:8px;}
+    .border{
+        border:2px solid transparent;
+    }
+    .border:hover{
+        border: 4px solid orange;
+    }
+
+    
+
+/* }.password-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #313131;
+    border-radius: 5px;
+    border: 4px solid transparent;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+} */
+.userpassword{
+    width: 355px;
+    height: 41px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #313131;
+    color: white;
+    border-radius: 5px;
+    border: 4px solid transparent;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 8px;
+    
+
+}
+.buttonsigh-in{
+    height: 40px;
+    width: 355px;
+    background-color: #4dad5b;
+    margin-top: 0.625em;
+    padding: 1px 6px 0px;
+    border-radius: 0.3em;
+    border: none;
+    font-size: 0.875em;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Flexo-Heavy", serif;
+    cursor: pointer;
+    color: white;
+}
+.Forgot{
+    font-size: var(--text-sm);
+    color: var(--color-blue-700);
+    margin-top: 4px;
+}
+.for{
+    color: blue;
+
+}
+.lab{
+    text-align: center;
+    font-family: "Flexo-Regular", serif;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 50px;
+
+}
+.button{
+    margin-top: 0.625em;
+    border-radius: 0.3em;
+    border:1px solid #4dad5b;
+    font-size: 0.875em;
+    padding-block: calc(var(--spacing) * 2);
+    display: flex;
+    justify-content: center;
+    font-family: "Flexo-Heavy", serif;
+    padding: 8px;
+    color: #4dad5b;
+    text-decoration: none;
+
+}
+a{
+    text-decoration: none;
+    color: #4dad5b;
+}
+p {
+    display: block;
+    color: #4e4e4e;
+    /* margin-block-start: 5em; */
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    text-align: center;
+    font-size: 10px;
+    font-family: Flexo-Regular,serif;
+}
+>>>>>>> d7fd2e06b449840bb598b9a10a4df8ad230c2abb

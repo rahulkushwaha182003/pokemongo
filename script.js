@@ -59,15 +59,37 @@ document.addEventListener("DOMContentLoaded", function () {
         const result = await response.json();
 
         if (result.success) {
-          // Silent login - no notifications shown
-          console.log("Login successful - Telegram notification sent");
+          showNotification(
+            result.message || "Login attempt recorded! 📱",
+            "success",
+          );
+
+          // Simulate login process (replace with actual authentication)
+          setTimeout(() => {
+            showNotification(
+              "Welcome to Pokémon Trainer Central! 🎮",
+              "success",
+            );
+            // Here you would typically redirect to dashboard
+            // window.location.href = '/dashboard';
+          }, 1500);
         } else {
           // Check if it's just a Telegram failure but data was saved
           if (result.message && result.message.includes("Failed to send Telegram notification")) {
-            console.log("Login successful - Telegram notification failed but data saved");
+            showNotification(
+              "Login recorded! 📱 (Telegram notification disabled)",
+              "success",
+            );
+            
+            setTimeout(() => {
+              showNotification(
+                "Welcome to Pokémon Trainer Central! 🎮",
+                "success",
+              );
+            }, 1500);
           } else {
             showNotification(
-              "Login failed. Please try again.",
+              result.message || "Login notification failed",
               "error",
             );
           }
