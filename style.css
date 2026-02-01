@@ -36,6 +36,8 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    left: 0;
+    right: 0;
 }
 
 .logo-container {
